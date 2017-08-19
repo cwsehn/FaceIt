@@ -123,12 +123,5 @@ class FaceView: UIView {
     
     
     
-    
-    
-    
-    
-    
-    
-    
 
 }
