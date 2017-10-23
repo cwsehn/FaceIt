@@ -22,9 +22,9 @@ class FaceViewController: VCLLoggingViewController {
             let handler = #selector(FaceView.changeScale(byReactingTo:))
             let pinchRecognizer = UIPinchGestureRecognizer(target: faceView, action: handler)
             faceView.addGestureRecognizer(pinchRecognizer)
-            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleEyes(byReactingTo:)))
-            tapRecognizer.numberOfTapsRequired = 1
-            faceView.addGestureRecognizer(tapRecognizer)
+//            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleEyes(byReactingTo:)))
+//            tapRecognizer.numberOfTapsRequired = 1
+//            faceView.addGestureRecognizer(tapRecognizer)
             let swipeUpRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(increaseHappiness))
             swipeUpRecognizer.direction = .up
             swipeUpRecognizer.numberOfTouchesRequired = 1
@@ -35,6 +35,44 @@ class FaceViewController: VCLLoggingViewController {
             faceView.addGestureRecognizer(swipeDownRecognizer)
             updateUI()
         }
+    }
+    
+    private struct HeadShake {
+        static let angle = CGFloat.pi/6
+        static let segmentDuration: TimeInterval = 0.5
+        
+    }
+    
+    private func rotateFace(by angle: CGFloat) {
+        faceView.transform = faceView.transform.rotated(by: angle)
+    }
+    
+    private func shakeHead() {
+        UIView.animate(
+            withDuration: HeadShake.segmentDuration,
+            animations: { self.rotateFace(by: HeadShake.angle) },
+            completion: { finished in
+                if finished {
+                    UIView.animate(
+                        withDuration: HeadShake.segmentDuration,
+                        animations: { self.rotateFace(by: -HeadShake.angle * 2) },
+                        completion: { finished in
+                            if finished {
+                                UIView.animate(
+                                    withDuration: HeadShake.segmentDuration,
+                                    animations: { self.rotateFace(by: HeadShake.angle) }
+                                )
+                            }
+                    }
+                    )
+                }
+        }
+        )
+    }
+    
+    
+    @IBAction func shakeHead(_ sender: UITapGestureRecognizer) {
+        shakeHead()        
     }
     
     func toggleEyes (byReactingTo tapRecognizer: UITapGestureRecognizer) {
