@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1313FAE01F488EBC00D17D65 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1313FADF1F488EBC00D17D65 /* FacialExpression.swift */; };
+		13597C0C1F55C76D0050A75E /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13597C0B1F55C76D0050A75E /* EmotionsViewController.swift */; };
 		1364B17D1F3D2A4F002E3A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364B17C1F3D2A4F002E3A62 /* AppDelegate.swift */; };
-		1364B17F1F3D2A4F002E3A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364B17E1F3D2A4F002E3A62 /* ViewController.swift */; };
+		1364B17F1F3D2A4F002E3A62 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364B17E1F3D2A4F002E3A62 /* FaceViewController.swift */; };
 		1364B1821F3D2A4F002E3A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1364B1801F3D2A4F002E3A62 /* Main.storyboard */; };
 		1364B1841F3D2A4F002E3A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1364B1831F3D2A4F002E3A62 /* Assets.xcassets */; };
 		1364B1871F3D2A4F002E3A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1364B1851F3D2A4F002E3A62 /* LaunchScreen.storyboard */; };
 		1364B1901F3D2EAE002E3A62 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364B18F1F3D2EAE002E3A62 /* FaceView.swift */; };
+		13864FA71F9E4EAC008289F3 /* BlinkingFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13864FA61F9E4EAC008289F3 /* BlinkingFaceViewController.swift */; };
+		13D8D3881F5606EA00138D6D /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D3871F5606EA00138D6D /* VCLLoggingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1313FADF1F488EBC00D17D65 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		13597C0B1F55C76D0050A75E /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		1364B1791F3D2A4F002E3A62 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1364B17C1F3D2A4F002E3A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1364B17E1F3D2A4F002E3A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1364B17E1F3D2A4F002E3A62 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		1364B1811F3D2A4F002E3A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1364B1831F3D2A4F002E3A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1364B1861F3D2A4F002E3A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1364B1881F3D2A4F002E3A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1364B18F1F3D2EAE002E3A62 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		13864FA61F9E4EAC008289F3 /* BlinkingFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingFaceViewController.swift; sourceTree = "<group>"; };
+		13D8D3871F5606EA00138D6D /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				1364B18E1F3D2BCE002E3A62 /* Support Files */,
-				1364B17E1F3D2A4F002E3A62 /* ViewController.swift */,
+				13597C0B1F55C76D0050A75E /* EmotionsViewController.swift */,
+				13D8D3871F5606EA00138D6D /* VCLLoggingViewController.swift */,
 				1364B1801F3D2A4F002E3A62 /* Main.storyboard */,
+				1313FADF1F488EBC00D17D65 /* FacialExpression.swift */,
 				1364B18F1F3D2EAE002E3A62 /* FaceView.swift */,
+				1364B17E1F3D2A4F002E3A62 /* FaceViewController.swift */,
+				13864FA61F9E4EAC008289F3 /* BlinkingFaceViewController.swift */,
 			);
 			path = FaceIt;
 			sourceTree = "<group>";
@@ -148,7 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1364B17F1F3D2A4F002E3A62 /* ViewController.swift in Sources */,
+				13D8D3881F5606EA00138D6D /* VCLLoggingViewController.swift in Sources */,
+				1364B17F1F3D2A4F002E3A62 /* FaceViewController.swift in Sources */,
+				1313FAE01F488EBC00D17D65 /* FacialExpression.swift in Sources */,
+				13597C0C1F55C76D0050A75E /* EmotionsViewController.swift in Sources */,
+				13864FA71F9E4EAC008289F3 /* BlinkingFaceViewController.swift in Sources */,
 				1364B17D1F3D2A4F002E3A62 /* AppDelegate.swift in Sources */,
 				1364B1901F3D2EAE002E3A62 /* FaceView.swift in Sources */,
 			);
@@ -279,6 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sehns.FaceIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -292,6 +309,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sehns.FaceIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -314,6 +332,7 @@
 				1364B18D1F3D2A4F002E3A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
