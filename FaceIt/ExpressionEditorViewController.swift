@@ -42,6 +42,31 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
             faceViewController?.expression = expression
         }
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "Add Emotion", name.isEmpty {
+            handleUnnamedFace()
+            return false
+        } else {
+            return super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
+        }
+    }
+    
+    private func handleUnnamedFace() {
+        let alert = UIAlertController(title: "No Name", message: "every face needs a name...", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.nameTextField?.text = alert.textFields?.first?.text
+            self.performSegue(withIdentifier: "Add Emotion", sender: nil)
+        }))
+        
+        present(alert, animated: true)
+        
+        
+    }
+    
+    
+    
 
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
