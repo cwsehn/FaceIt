@@ -43,6 +43,8 @@ class FaceView: UIView {
         switch pinchRecognizer.state {
         case .changed, .ended:
             scale *= pinchRecognizer.scale
+            positionEye(leftEye, center: centerOfEye(.left))
+            positionEye(rightEye, center: centerOfEye(.right))
             pinchRecognizer.scale = 1
         default:
             break
@@ -162,15 +164,11 @@ class FaceView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-
-        
         color.set()
         pathForSkull().stroke()
         //pathForEye(.left).stroke()
         //pathForEye(.right).stroke()
         pathForMouth().stroke()
-        
-        
     }
     
     

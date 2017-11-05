@@ -21,7 +21,7 @@ class EyeView: UIView
         set {
             if newValue != _eyesOpen {
                 // animate opening/closing the eyes
-                UIView.transition(with: self, duration: 0.4, options: [.transitionFlipFromTop], animations: {
+                UIView.transition(with: self, duration: 0.4, options: [.transitionFlipFromBottom], animations: {
                     self._eyesOpen = newValue
                 })
             }

@@ -74,13 +74,17 @@ class FaceViewController: VCLLoggingViewController {
     @IBAction func shakeHead(_ sender: UITapGestureRecognizer) {
         shakeHead()        
     }
+
     
-    func toggleEyes (byReactingTo tapRecognizer: UITapGestureRecognizer) {
-        if tapRecognizer.state == .ended {
-            let eyes: FacialExpression.Eyes = (expression.eyes == .closed) ? .open : .closed
-            expression = FacialExpression(eyes: eyes, mouth: expression.mouth)
-        }
-    }
+    
+//    func toggleEyes (byReactingTo tapRecognizer: UITapGestureRecognizer) {
+//        if tapRecognizer.state == .ended {
+//            let eyes: FacialExpression.Eyes = (expression.eyes == .closed) ? .open : .closed
+//            expression = FacialExpression(eyes: eyes, mouth: expression.mouth)
+//        }
+//    }
+
+    
     
     func increaseHappiness () {
         expression = expression.happier
@@ -90,17 +94,16 @@ class FaceViewController: VCLLoggingViewController {
         expression = expression.sadder
     }
     
-
-
     
-    private func updateUI () {
+    func updateUI () {
         switch expression.eyes {
         case .open:
             faceView?.eyesOpen = true
         case .closed:
             faceView?.eyesOpen = false
         case .squinting:
-            faceView?.eyesOpen = false
+            //faceView?.eyesOpen = false
+            break
         }
         faceView?.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
         
